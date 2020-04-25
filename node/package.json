@@ -1,0 +1,16 @@
+{
+  "name": "@tuuturu/toolbox-node",
+  "version": "0.0.1",
+  "description": "Set of tools for the Tuuturu platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config rollup.config.js"
+  },
+  "author": "Julius Pedersen <deifyed@ctemplar.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "rollup": "^2.7.2"
+  }
+}
