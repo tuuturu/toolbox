@@ -21,10 +21,10 @@ jobs:
         registry-url: https://npm.pkg.github.com
         persist-credentials: false
 
-    - run: cd src/node && npm ci
-    - run: cd src/node && make build
+    - run: cd node && npm ci
+    - run: cd node && make build
       env:
         NODE_ENV: production
-    - run: npm publish src/node/build/
+    - run: npm publish node/build/
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
