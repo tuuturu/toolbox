@@ -2,6 +2,14 @@
   "name": "@tuuturu/toolbox-node",
   "version": "0.0.1",
   "description": "Set of tools for the Tuuturu platform",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:tuuturu/toolbox.git",
+		"directory": "packages/toolbox-node"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
   "main": "index",
   "scripts": {
     "test": "jest --rootDir src",
