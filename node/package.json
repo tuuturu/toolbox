@@ -18,13 +18,13 @@
   "author": "Julius Pedersen <deifyed@ctemplar.com>",
   "license": "MIT",
   "dependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
-    "@rollup/plugin-commonjs": "^11.1.0",
     "axios": "^0.19.2",
-    "redis": "^3.0.2",
-    "rollup": "^2.7.2"
+    "redis": "^3.0.2"
   },
   "devDependencies": {
-    "jest": "^25.4.0"
+    "jest": "^25.4.0",
+    "rollup": "^2.7.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
+    "@rollup/plugin-commonjs": "^11.1.0"
   }
 }
