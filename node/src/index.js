@@ -1,5 +1,7 @@
-import middleware from './middleware/index'
+const data = require('./data')
+const middleware = require('./authentication')
 
-export default {
+module.exports = {
+	data,
 	middleware
 }

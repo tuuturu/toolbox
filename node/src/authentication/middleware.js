@@ -1,4 +1,4 @@
-import axios from 'axios'
+const axios = require('axios')
 
 class AuthorizationError extends Error {
 	constructor(...args) {
@@ -42,7 +42,7 @@ function setupMiddleware(userinfo_endpoint) {
 	}
 }
 
-export default {
+module.exports = {
 	AuthorizationError,
 	authenticationMiddleware: setupMiddleware
 }

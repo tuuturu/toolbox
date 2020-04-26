@@ -2,15 +2,21 @@
   "name": "@tuuturu/toolbox-node",
   "version": "0.0.1",
   "description": "Set of tools for the Tuuturu platform",
-  "main": "index.js",
+  "main": "index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --rootDir src",
     "build": "rollup --config rollup.config.js"
   },
   "author": "Julius Pedersen <deifyed@ctemplar.com>",
   "license": "MIT",
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
+    "@rollup/plugin-commonjs": "^11.1.0",
     "axios": "^0.19.2",
+    "redis": "^3.0.2",
     "rollup": "^2.7.2"
+  },
+  "devDependencies": {
+    "jest": "^25.4.0"
   }
 }
