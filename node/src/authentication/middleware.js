@@ -16,7 +16,7 @@ async function validateToken(url, authorization) {
 			url,
 			method: 'get',
 			headers: {
-				cookie: token
+				cookie: `access_token=${token}`
 			}
 		})
 
