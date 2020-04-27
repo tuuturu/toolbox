@@ -9,11 +9,15 @@ class AuthorizationError extends Error {
 async function validateToken(url, authorization) {
 	if (!authorization) throw new AuthorizationError()
 
+	const token = authorization.split(' ')[1]
+
 	try {
 		const { data } = await axios.request({
 			url,
 			method: 'get',
-			headers: { authorization }
+			headers: {
+				cookie: token
+			}
 		})
 
 		return data
