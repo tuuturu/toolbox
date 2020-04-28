@@ -6,10 +6,13 @@ class AuthorizationError extends Error {
 	}
 }
 
+const tokenCache = {}
 async function validateToken(url, authorization) {
 	if (!authorization) throw new AuthorizationError()
 
 	const token = authorization.split(' ')[1]
+
+	if (token in tokenCache) return tokenCache[token]
 
 	try {
 		const { data } = await axios.request({
@@ -19,6 +22,9 @@ async function validateToken(url, authorization) {
 				cookie: `access_token=${token}`
 			}
 		})
+
+		tokenCache[token] = data
+		setTimeout(() => delete tokenCache[token], 3000)
 
 		return data
 	}
